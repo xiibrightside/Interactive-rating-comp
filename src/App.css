@@ -1,38 +1,149 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  background-color: var(--very-dark-blue);
+  margin: 0;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: calc(100vh + 25px);
+}
+
+.wrapper {
+  width: 400px;
+  height: 380px;
+  border-radius: 25px;
+  background: linear-gradient(120deg, var(--dark-blue), var(--very-dark-blue));
+  padding: 30px 40px 30px 40px;
+  /* position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); */
+}
+
+h2 {
+  font-family: "Overpass", sans-serif;
   color: white;
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 20px;
+  letter-spacing: 0.5px;
 }
 
-.App-link {
-  color: #61dafb;
+p {
+  font-family: "Overpass", sans-serif;
+  color: var(--light-grey);
+  font-size: 13px;
+  font-weight: 400;
+  margin-top: 5px;
+  letter-spacing: 0.5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.submit {
+  margin-top: 25px;
+  width: 100%;
+  height: 40px;
+  font-family: "Overpass", sans-serif;
+  font-weight: 400;
+  color: white;
+  padding-top: 2px;
+  letter-spacing: 1px;
+  background-color: var(--orange);
+}
+
+.submit:hover {
+  color: var(--orange);
+  background-color: white;
+  transition: all 300ms ease-in-out;
+}
+
+ul {
+  margin: 25px 0 10px 0;
+  flex-direction: column;
+  columns: 5;
+}
+
+.numbers {
+  font-family: "Overpass", sans-serif;
+  height: 50px;
+  width: 50px;
+  padding-top: 2px;
+}
+
+.numbers:hover {
+  transition: all 200ms ease-in-out;
+  background-color: var(--light-grey);
+}
+
+.numbers:focus {
+  background-color: var(--orange);
+}
+
+.pthanks {
+  letter-spacing: 1px;
+}
+
+.selected {
+  width: fit-content;
+  text-align: center;
+  padding: 12px 20px 10px 20px;
+  margin-top: 25px;
+  color: var(--orange);
+}
+
+.again {
+  opacity: 0.8;
+  color: var(--orange);
+}
+
+.again:hover {
+  transition: all 300ms ease-in-out;
+  color: var(--medium-grey);
+}
+
+@media only screen and (max-width: 540px) {
+  body {
+    height: calc(100vh + 40px);
   }
-  to {
-    transform: rotate(360deg);
+
+  .wrapper {
+    width: 280px;
+    height: 260px;
+    padding: 10px 15px 10px 15px;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-top: 15px;
+  }
+
+  p {
+    font-size: 11px;
+    font-weight: 400;
+    margin-top: 3px;
+  }
+
+  .submit {
+    margin-top: 10px;
+    height: 30px;
+  }
+
+  ul {
+    margin: 15px 0 10px 0;
+    flex-direction: column;
+    columns: 5;
+  }
+
+  .numbers {
+    width: 30px;
+    height: 30px;
+  }
+
+  .thximg {
+    width: 100px;
+  }
+
+  .selected {
+    padding: 10px 15px 8px 15px;
+    margin-top: 15px;
+    color: var(--orange);
   }
 }
